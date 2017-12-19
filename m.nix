@@ -6,6 +6,18 @@
     chromium
     pavucontrol
     git
+    wine
+    qbittorrent
+    xorg.xkill
+    xfce.thunar
+    atom
+    file
+    unzip
+    eclipses.eclipse-cpp
+    libreoffice
+    exfat
+    exfat-utils
+    fuse_exfat
   ];
 
   programs.chromium = {
@@ -19,6 +31,10 @@
     ];
   };
 
+  hardware.opengl.driSupport32Bit = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  nixpkgs.config.allowUnfree = true;
+  services.compton.enable = true;
+
+
 }
-
-
